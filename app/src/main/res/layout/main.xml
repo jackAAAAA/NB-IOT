@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- Settings -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="500dp"
+        android:layout_margin="1.5dip"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:background="#ff0000"
+        android:tag="configure block" >
+
+        <Button
+            android:id="@+id/open_device"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_bright"
+            android:text="@string/open" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/baudRate"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.8"
+                android:gravity="center|bottom"
+                android:text="@string/baud_rate_str"
+                android:textColor="#ffffff" />
+
+            <Spinner
+                android:id="@+id/baudRateValue"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="#FFFBF0"
+                android:gravity="center_horizontal|center"
+                android:inputType="none" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/stopBit"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.8"
+                android:gravity="center|bottom"
+                android:text="@string/stop_bit"
+                android:textColor="#ffffff" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/stopBitValue"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="#FFFBF0"
+                android:gravity="center_horizontal|center"
+                android:inputType="none" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/dataBit"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.8"
+                android:gravity="center|bottom"
+                android:text="@string/data_bit"
+                android:textColor="#ffffff" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/dataBitValue"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="#FFFBF0"
+                android:gravity="center_horizontal|center"
+                android:inputType="none" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/parity"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.8"
+                android:gravity="center|bottom"
+                android:text="@string/parity_str"
+                android:textColor="#ffffff" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/parityValue"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="#FFFBF0"
+                android:gravity="center_horizontal|center"
+                android:inputType="none" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/flowControl"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.8"
+                android:gravity="center|bottom"
+                android:text="@string/flow"
+                android:textColor="#ffffff" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/flowControlValue"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="#FFFBF0"
+                android:gravity="center"
+                android:inputType="none" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/configButton"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#800080"
+                android:gravity="center"
+                android:scaleType="centerInside"
+                android:text="@string/config"
+                android:textColorHint="#FFFBF0" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Read byte -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="1.5dip"
+        android:layout_weight="1"
+        android:background="#008000"
+        android:tag="Read block" >
+
+        <TextView
+            android:id="@+id/ReadBytes"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/read_bytes"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ReadValues"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="#FFFBFA"
+            android:focusableInTouchMode="false"
+            android:gravity="start|center"
+            android:hint="@string/hint_1" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.5"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/clearButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="3"
+                    android:background="@android:color/holo_blue_bright"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:text="@string/clear"
+                    android:textColorHint="#FFFBF0" />
+
+                <Button
+                    android:id="@+id/WriteButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="3"
+                    android:background="#800080"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:text="@string/write"
+                    android:textColorHint="#FFFBF0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/ReadButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="3"
+                    android:background="#800080"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:text="@string/read"
+                    android:textColorHint="#FFFBF0" />
+
+                <Button
+                    android:id="@+id/StopButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="3"
+                    android:background="#800080"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:text="@string/stop"
+                    android:textColorHint="#FFFBF0" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Write byte -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="1.5dip"
+        android:layout_weight="1"
+        android:background="#000080"
+        android:tag="Write block" >
+
+        <TextView
+            android:id="@+id/WriteBytes"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/write_bytes"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/WriteValues"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="#FFFBF0"
+            android:editable="true"
+            android:gravity="start|center"
+            android:hint="@string/hint"
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.5"
+            android:orientation="vertical" >
+
+            <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:tag="configure block" >
+
+            <Button
+                android:id="@+id/ConnectButton_1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#800080"
+                android:gravity="center"
+                android:scaleType="centerInside"
+                android:text="@string/connect_1"
+                android:textColorHint="#FFFBF0" />
+
+            <Button
+                android:id="@+id/ConnectButton_2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#800080"
+                android:gravity="center"
+                android:scaleType="centerInside"
+                android:text="@string/connect_2"
+                android:textColorHint="#FFFBF0" />
+
+            <Button
+                android:id="@+id/ConnectButton_3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#800080"
+                android:gravity="center"
+                android:scaleType="centerInside"
+                android:text="@string/connect_3"
+                android:textColorHint="#FFFBF0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:tag="configure block" >
+
+                <Button
+                    android:id="@+id/ConnectButton_4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#800080"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:text="@string/connect_4"
+                    android:textColorHint="#FFFBF0" />
+
+                <Button
+                    android:id="@+id/ConnectButton_5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#800080"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:text="@string/connect_5"
+                    android:textColorHint="#FFFBF0" />
+
+                <Button
+                    android:id="@+id/ConnectButton_6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#800080"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:text="@string/connect_6"
+                    android:textColorHint="#FFFBF0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:tag="configure block" >
+
+                <Button
+                    android:id="@+id/ConnectButton_7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#800080"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:text="@string/connect_7"
+                    android:textColorHint="#FFFBF0" />
+
+                <Button
+                    android:id="@+id/ConnectButton_8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#800080"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:text="@string/connect_8"
+                    android:textColorHint="#FFFBF0" />
+
+                <Button
+                    android:id="@+id/ConnectButton_9"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="#800080"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:text="@string/connect_9"
+                    android:textColorHint="#FFFBF0" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
